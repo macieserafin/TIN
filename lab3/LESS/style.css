@@ -37,7 +37,7 @@ body {
   transition: 0.2s ease;
 }
 .top-bar .menu a:hover {
-  color: #830010;
+  color: #8d0012;
   background: #ffffff;
 }
 .top-bar .menu a:last-child {

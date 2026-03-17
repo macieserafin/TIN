@@ -1,140 +1,131 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #efefef;
-    color: #000;
+  font-family: "Poppins", sans-serif;
+  background: #e6e6e6;
+  color: #111;
 }
 
 .top-bar {
-    background: #f3f3f3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    min-height: 85px;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  min-height: 85px;
 }
-
-.logo-box img {
-    width: 70px;
-    height: auto;
-    display: block;
+.top-bar .logo-box img {
+  width: 70px;
+  height: auto;
+  display: block;
 }
-
-.menu {
-    display: flex;
-    align-items: center;
+.top-bar .menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-
-.menu a {
-    text-decoration: none;
-    color: red;
-    font-size: 32px;
-    font-weight: 400;
-    padding: 0 14px;
-    border-right: 1px solid #a88ac5;
-    line-height: 1;
+.top-bar .menu a {
+  text-decoration: none;
+  color: #c00018;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 0 14px;
+  border-right: 1px solid #cfcfe8;
+  line-height: 1;
+  transition: 0.2s ease;
 }
-
-.menu a:last-child {
+.top-bar .menu a:hover {
+  color: rgb(141, 0, 17.625);
+  background: white;
+}
+.top-bar .menu a:last-child {
+  border-right: none;
+}
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0 0;
+  }
+  .top-bar .logo-box {
+    margin-bottom: 10px;
+  }
+  .top-bar .menu {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .top-bar .menu a {
     border-right: none;
+    border-top: 1px solid #cfcfe8;
+    text-align: center;
+    font-size: 32px;
+    padding: 8px 0;
+  }
+  .top-bar .menu a:last-child {
+    border-bottom: 1px solid #cfcfe8;
+  }
 }
 
 .content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    background: #dedede;
-    padding: 25px 15px 40px;
-    min-height: calc(100vh - 145px);
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background: #e1e1e1;
+  padding: 25px 15px 40px;
+  min-height: calc(100vh - 145px);
 }
-
-.column {
-    flex: 1;
+.content .column {
+  flex: 1;
 }
-
-.column h2 {
-    font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 18px;
+.content .column h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  color: #c00018;
 }
-
-.column p {
+.content .column p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 340px;
+}
+.content .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 280px;
+}
+.content .gallery img {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 35px;
+    padding: 20px 6px 30px;
+  }
+  .content .column p {
+    max-width: 100%;
     font-size: 18px;
-    line-height: 1.6;
-    max-width: 340px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    max-width: 280px;
-}
-
-.gallery img {
+  }
+  .content .gallery {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .content .gallery img {
     width: 100%;
-    display: block;
+  }
 }
 
 .footer {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 16px;
-}
-
-@media (max-width: 768px) {
-    .top-bar {
-        flex-direction: column;
-        justify-content: center;
-        padding: 10px 0 0;
-    }
-
-    .logo-box {
-        margin-bottom: 10px;
-    }
-
-    .menu {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .menu a {
-        border-right: none;
-        border-top: 1px solid #a88ac5;
-        text-align: center;
-        font-size: 32px;
-        padding: 8px 0;
-    }
-
-    .menu a:last-child {
-        border-bottom: 1px solid #a88ac5;
-    }
-
-    .content {
-        flex-direction: column;
-        gap: 35px;
-        padding: 20px 6px 30px;
-    }
-
-    .column p {
-        max-width: 100%;
-        font-size: 18px;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
-
-    .gallery img {
-        width: 100%;
-    }
-}
+  background: #b00012;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */
