@@ -6,91 +6,93 @@
   <title>PJATK - Tailwind</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#efefef] text-[#1f2937]">
+<body class="bg-[#efefef] text-[#1f2937] min-h-screen flex flex-col">
 
-  <nav class="w-full bg-[#efefef] border-b border-gray-300 shadow-sm">
-    <div class="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
-        
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between py-3">
-        
-        <div class="flex items-center gap-4">
-          <img src="logoPJATK.png" alt="PJATK" class="w-10 h-10 object-contain">
-          <span class="text-[22px] font-bold text-[#2b2f3a]">PJATK</span>
-        </div>
+    <main class="flex-1">
 
-        <ul class="flex flex-col md:flex-row md:items-center gap-4 md:gap-10 mt-5 md:mt-0 text-[15px] text-[#2b2f3a]">
-          <li><a href="#" class="hover:text-black">Strona główna</a></li>
-          <li><a href="#" class="hover:text-black">O nas</a></li>
-          <li><a href="#" class="hover:text-black">Oferta</a></li>
-          <li><a href="#" class="hover:text-black">Blog</a></li>
-          <li><a href="#" class="hover:text-black">Kontakt</a></li>
-        </ul>
+        <nav class="w-full bg-[#efefef] border-b border-gray-300 shadow-sm">
+            <div class="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+                
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between py-3">
+                
+                <div class="flex items-center gap-4">
+                <img src="logoPJATK.png" alt="PJATK" class="w-10 h-10 object-contain">
+                <span class="text-[22px] font-bold text-[#2b2f3a]">PJATK</span>
+                </div>
 
-      </div>
-    </div>
-  </nav>
+                <ul class="flex flex-col md:flex-row md:items-center gap-4 md:gap-10 mt-5 md:mt-0 text-[15px] text-[#2b2f3a]">
+                <li><a href="#" class="hover:text-black">Strona główna</a></li>
+                <li><a href="#" class="hover:text-black">O nas</a></li>
+                <li><a href="#" class="hover:text-black">Oferta</a></li>
+                <li><a href="#" class="hover:text-black">Blog</a></li>
+                <li><a href="#" class="hover:text-black">Kontakt</a></li>
+                </ul>
 
-  <section class="w-full bg-[#efefef]">
-    <!-- <div class="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-10 md:pt-8 pb-10 md:pb-12"> -->
-    <div class="hidden md:block max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-10 md:pt-8 pb-10 md:pb-12">
-      <h1 class="text-[42px] sm:text-[56px] md:text-[70px] leading-none font-extrabold text-black">
-        Polsko-Japońska
-      </h1>
-      <p class="mt-3 text-[22px] md:text-[24px] text-black">
-        Akademia Technik Komputerowych
-      </p>
+            </div>
+            </div>
+        </nav>
 
-      <div class="mt-3 flex items-center justify-center gap-3">
-        <a href="#" class="bg-blue-200 hover:bg-blue-300 text-black text-[14px] px-5 py-3 rounded">
-          Dla studentów
-        </a>
-        <a href="#" class="bg-blue-200 hover:bg-blue-300 text-black text-[14px] px-5 py-3 rounded">
-          Dla kandydatów
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="w-full bg-[#e9e9eb] py-14 md:py-16">
-    <div class="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-
-        <article class="bg-[#efefef] rounded-lg shadow-md overflow-hidden">
-          <img src="image.jpeg" alt="Aktualność 1" class="w-full h-[170px] md:h-[190px] object-cover">
-          <div class="px-6 py-5">
-            <h2 class="text-[22px] font-bold text-black">Aktualność 1</h2>
-            <p class="mt-3 text-[15px] leading-8 md:leading-8 text-[#374151]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        <section class="w-full bg-[#efefef]">
+            <div class="hidden md:block max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-10 md:pt-8 pb-10 md:pb-12">
+            <h1 class="text-[42px] sm:text-[56px] md:text-[70px] leading-none font-extrabold text-black">
+                Polsko-Japońska
+            </h1>
+            <p class="mt-3 text-[22px] md:text-[24px] text-black">
+                Akademia Technik Komputerowych
             </p>
-            <a href="#" class="inline-block mt-5 text-[14px] text-blue-600 hover:underline">Więcej</a>
-          </div>
-        </article>
 
-        <article class="bg-[#efefef] rounded-lg shadow-md overflow-hidden">
-          <img src="image.jpeg" alt="Aktualność 2" class="w-full h-[170px] md:h-[190px] object-cover">
-          <div class="px-6 py-5">
-            <h2 class="text-[22px] font-bold text-black">Aktualność 2</h2>
-            <p class="mt-3 text-[15px] leading-8 md:leading-8 text-[#374151]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-            <a href="#" class="inline-block mt-5 text-[14px] text-blue-600 hover:underline">Więcej</a>
-          </div>
-        </article>
+            <div class="mt-3 flex items-center justify-center gap-3">
+                <a href="#" class="bg-blue-200 hover:bg-blue-300 text-black text-[14px] px-5 py-3 rounded">
+                Dla studentów
+                </a>
+                <a href="#" class="bg-blue-200 hover:bg-blue-300 text-black text-[14px] px-5 py-3 rounded">
+                Dla kandydatów
+                </a>
+            </div>
+            </div>
+        </section>
 
-        <article class="bg-[#efefef] rounded-lg shadow-md overflow-hidden">
-          <img src="image.jpeg" alt="Aktualność 3" class="w-full h-[170px] md:h-[190px] object-cover">
-          <div class="px-6 py-5">
-            <h2 class="text-[22px] font-bold text-black">Aktualność 3</h2>
-            <p class="mt-3 text-[15px] leading-8 md:leading-8 text-[#374151]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-            <a href="#" class="inline-block mt-5 text-[14px] text-blue-600 hover:underline">Więcej</a>
-          </div>
-        </article>
+        <section class="w-full bg-[#e9e9eb] py-14 md:py-16">
+            <div class="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
-      </div>
-    </div>
-  </section>
+                <article class="bg-[#efefef] rounded-lg shadow-md overflow-hidden">
+                <img src="image.jpeg" alt="Aktualność 1" class="w-full h-[170px] md:h-[190px] object-cover">
+                <div class="px-6 py-5">
+                    <h2 class="text-[22px] font-bold text-black">Aktualność 1</h2>
+                    <p class="mt-3 text-[15px] leading-8 md:leading-8 text-[#374151]">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                    <a href="#" class="inline-block mt-5 text-[14px] text-blue-600 hover:underline">Więcej</a>
+                </div>
+                </article>
+
+                <article class="bg-[#efefef] rounded-lg shadow-md overflow-hidden">
+                <img src="image.jpeg" alt="Aktualność 2" class="w-full h-[170px] md:h-[190px] object-cover">
+                <div class="px-6 py-5">
+                    <h2 class="text-[22px] font-bold text-black">Aktualność 2</h2>
+                    <p class="mt-3 text-[15px] leading-8 md:leading-8 text-[#374151]">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                    <a href="#" class="inline-block mt-5 text-[14px] text-blue-600 hover:underline">Więcej</a>
+                </div>
+                </article>
+
+                <article class="bg-[#efefef] rounded-lg shadow-md overflow-hidden">
+                <img src="image.jpeg" alt="Aktualność 3" class="w-full h-[170px] md:h-[190px] object-cover">
+                <div class="px-6 py-5">
+                    <h2 class="text-[22px] font-bold text-black">Aktualność 3</h2>
+                    <p class="mt-3 text-[15px] leading-8 md:leading-8 text-[#374151]">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                    <a href="#" class="inline-block mt-5 text-[14px] text-blue-600 hover:underline">Więcej</a>
+                </div>
+                </article>
+
+            </div>
+            </div>
+        </section>
+    </main>
 
   <footer class="w-full bg-[#04122d] text-white">
     <div class="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-8">
