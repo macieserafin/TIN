@@ -1,19 +1,24 @@
-
 function pitagoras(a, b, c) {
-    const l = [a, b, c].sort((x, y) => x - y);
-    const [x, y, z] = l;
+    let liczby = [a, b, c];
+    liczby.sort(function(x, y) {
+        return x - y;
+    });
+
+    let x = liczby[0];
+    let y = liczby[1];
+    let z = liczby[2];
 
     if (x > 0 && y > 0 && z > 0 && x * x + y * y === z * z) {
         console.log("To jest trójka pitagorejska");
         return true;
-    } else {
-        console.log("To nie jest trójka pitagorejska");
-        return false;
     }
+
+    console.log("To nie jest trójka pitagorejska");
+    return false;
 }
 
 function podzielne(a, b, c) {
-    console.log(`Liczby z przedziału ${a}-${b} podzielne przez ${c}:`);
+    console.log("Liczby z przedziału " + a + "-" + b + " podzielne przez " + c + ":");
 
     for (let i = a; i <= b; i++) {
         if (i % c === 0) {
@@ -24,61 +29,70 @@ function podzielne(a, b, c) {
 
 function tabliczka(n) {
     for (let i = 1; i <= n; i++) {
-        let w = "";
+        let wiersz = "";
+
         for (let j = 1; j <= n; j++) {
-            w += (i * j) + " ";
+            wiersz += i * j + " ";
         }
-        console.log(w.trim());
+
+        console.log(wiersz);
     }
 }
 
 function fibonacci(n) {
-    let a = 0;
-    let b = 1;
-
     if (n <= 0) {
         console.log("Podaj liczbę większą od 0");
         return;
     }
 
-    let w = [];
+    let a = 0;
+    let b = 1;
+    let wynik = "";
 
     for (let i = 0; i < n; i++) {
-        w.push(a);
-        let next = a + b;
+        wynik += a + " ";
+        let temp = a + b;
         a = b;
-        b = next;
+        b = temp;
     }
 
-    console.log(w.join(" "));
+    console.log(wynik);
 }
 
 function choinka(n) {
     for (let i = 1; i <= n; i++) {
-        console.log("*".repeat(i));
+        let wiersz = "";
+
+        for (let j = 0; j < i; j++) {
+            wiersz += "*";
+        }
+
+        console.log(wiersz);
     }
 }
 
 function choinkaNoca(n) {
-    if (n < 2) {
-        console.log("*");
-        return;
-    }
+    let szerokosc = 2 * n - 3;
 
-    const szerokosc = 2 * n - 3;
+    for (let i = 0; i < szerokosc; i++) {
+        process = "";
+    }
 
     console.log("*".repeat(szerokosc));
 
-    for (let i = 1; i <= n - 2; i++) {
-        const gwiazdki = n - 1 - i;
-        const spacje = szerokosc - 2 * gwiazdki;
+    for (let i = n - 2; i >= 1; i--) {
+        let spacje = szerokosc - 2 * i;
+        let wiersz = "";
 
-        console.log("*".repeat(gwiazdki) + " ".repeat(spacje) + "*".repeat(gwiazdki));
+        wiersz += "*".repeat(i);
+        wiersz += " ".repeat(spacje);
+        wiersz += "*".repeat(i);
+
+        console.log(wiersz);
     }
 
     console.log("*".repeat(szerokosc));
 }
-
 
 function poleProstokata(a, b) {
     return a * b;
@@ -97,9 +111,9 @@ function poleTrojkata(a, h) {
 }
 
 function poleFigury(figura, a, b, h) {
-    let pole;
+    let pole = 0;
 
-    switch (figura.toLowerCase()) {
+    switch (figura) {
         case "prostokat":
             pole = poleProstokata(a, b);
             break;
@@ -117,8 +131,7 @@ function poleFigury(figura, a, b, h) {
             return;
     }
 
-    console.log(`Pole figury ${figura} wynosi: ${pole}`);
-    return pole;
+    console.log("Pole figury " + figura + " wynosi: " + pole);
 }
 
 function pascal(n) {
@@ -135,10 +148,14 @@ function pascal(n) {
             }
         }
 
-        console.log(trojkat[i].join(" "));
+        let wiersz = "";
+        for (let j = 0; j < trojkat[i].length; j++) {
+            wiersz += trojkat[i][j] + " ";
+        }
+
+        console.log(wiersz);
     }
 }
-
 
 pitagoras(3, 5, 4);
 podzielne(1, 20, 3);
