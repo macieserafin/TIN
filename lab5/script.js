@@ -156,15 +156,22 @@ function pascal(n) {
         console.log(wiersz);
     }
 }
-
+//1
 pitagoras(3, 5, 4);
+//2
 podzielne(1, 20, 3);
+//3
 tabliczka(3);
+//4
 fibonacci(10);
+//5
 choinka(4);
+//6
 choinkaNoca(6);
+//7
 poleFigury("prostokat", 4, 5);
 poleFigury("trapez", 4, 6, 3);
 poleFigury("rownoleglobok", 5, 0, 4);
 poleFigury("trojkat", 6, 0, 4);
+//8
 pascal(6);
