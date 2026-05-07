@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #efefef;
+    color: #000;
+}
+
+.top-bar {
+    background: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    min-height: 85px;
+}
+
+.top-bar img {
+    width: 70px;
+    height: auto;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: red;
+    font-size: 32px;
+    font-weight: 400;
+    padding: 0 14px;
+    border-right: 1px solid #a88ac5;
+    line-height: 1;
+}
+
+.menu a:last-child {
+    border-right: none;
+}
+
+.hamburger {
+    display: none;
+    padding: 8px 12px;
+    font-size: 26px;
+    color: #fff;
+    background: red;
+    border: none;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: calc(100vh - 85px);
+    padding: 25px 15px 40px;
+    background: #dedede;
+}
+
+.content section {
+    flex: 1;
+}
+
+.content h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.content p {
+    max-width: 340px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.content img {
+    width: 100%;
+    max-width: 280px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 10px;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 8px 0;
+        text-align: center;
+        border-right: none;
+        border-top: 1px solid #a88ac5;
+    }
+
+    .menu a:last-child {
+        border-bottom: 1px solid #a88ac5;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 35px;
+        padding: 20px 6px 30px;
+    }
+
+    .content p,
+    .content img {
+        max-width: 100%;
+    }
+}
